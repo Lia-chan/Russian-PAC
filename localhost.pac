@@ -3,7 +3,7 @@
 
 if (shExpMatch(host, "*.onion"))
 {
-    return "SOCKS5 127.0.0.1:9050; DIRECT";
+    return "SOCKS 127.0.0.1:9050; DIRECT";
 }
 
 function FindProxyForURL(url, host) {
@@ -19770,7 +19770,7 @@ function FindProxyForURL(url, host) {
 
     if (blockedips.indexOf(dnsResolve(host)) != -1)
     {
-        return "SOCKS5 127.0.0.1:9050; DIRECT";
+        return "SOCKS 127.0.0.1:9050; DIRECT";
     }
   }
   return "DIRECT";
