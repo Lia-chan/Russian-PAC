@@ -1,11 +1,6 @@
 // ProstoVPN.AntiZapret PAC-ip File
 // Generated on Sat Jun  4 18:13:05 MSK 2016
 
-if (shExpMatch(host, "*.onion"))
-{
-    return "SOCKS5 127.0.0.1:9050";
-}
-
 function FindProxyForURL(url, host) {
   blockedips = [ 
         "101.1.29.236",
@@ -19768,10 +19763,14 @@ function FindProxyForURL(url, host) {
         "99.198.117.212",
       ];
 
+    if (shExpMatch(host, "*.onion"))
+    {
+        return "SOCKS5 127.0.0.1:9050";
+    }
+
     if (blockedips.indexOf(dnsResolve(host)) != -1)
     {
         return "SOCKS5 127.0.0.1:9050";
     }
-  }
-  return "DIRECT";
+    return "DIRECT";
 }
