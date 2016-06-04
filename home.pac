@@ -19764,12 +19764,12 @@ function FindProxyForURL(url, host) {
 
     if (shExpMatch(host, "*.onion"))
     {
-        return "SOCKS5 127.0.0.1:9050; SOCKS5 192.168.1.1:9050; DIRECT";
+        return "SOCKS5 192.168.1.1:9050; DIRECT";
     }
 
     if (blockedips.indexOf(dnsResolve(host)) != -1)
     {
-        return "SOCKS5 127.0.0.1:9050; SOCKS5 192.168.1.1:9050; DIRECT";
+        return "SOCKS5 192.168.1.1:9050; DIRECT";
     }
     return "DIRECT";
 }
