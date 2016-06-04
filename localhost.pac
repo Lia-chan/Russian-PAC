@@ -1,6 +1,4 @@
-// ProstoVPN.AntiZapret PAC-ip File
-// Generated on Sat Jun  4 18:13:05 MSK 2016
-
+#Psychodelta's PAC file
 function FindProxyForURL(url, host) {
   blockedips = [ 
         "101.1.29.236",
