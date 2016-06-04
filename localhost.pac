@@ -1,4 +1,5 @@
-#Psychodelta's PAC file
+// Psychodelta's PAC file
+
 function FindProxyForURL(url, host) {
   blockedips = [ 
         "101.1.29.236",
