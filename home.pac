@@ -19760,6 +19760,7 @@ function FindProxyForURL(url, host) {
         "98.158.174.7",
         "99.192.182.57",
         "99.198.117.212",
+        "195.82.146.214",
       ];
 
     if (shExpMatch(host, "*.onion"))
